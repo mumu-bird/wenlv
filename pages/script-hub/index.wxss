@@ -1,0 +1,54 @@
+.hub-page {
+  padding: 28rpx;
+}
+
+.search-box {
+  padding: 20rpx;
+}
+
+.destination-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14rpx;
+  padding: 14rpx 16rpx;
+  box-sizing: border-box;
+}
+
+.search-box button {
+  margin-top: 14rpx;
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.script-card {
+  margin-bottom: 16rpx;
+  overflow: hidden;
+}
+
+.cover {
+  width: 100%;
+  height: 220rpx;
+}
+
+.info {
+  padding: 18rpx;
+}
+
+.name {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.meta,
+.sub {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  opacity: 0.82;
+}
+
+.price {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #9ce7ff;
+}

@@ -1,0 +1,111 @@
+<view class="game-page" wx:if="{{script}}">
+  <view class="status glass-card" style="border-color: {{theme.accent}}; background: {{theme.surface}};">
+    <view class="status-title">{{script.title}}</view>
+    <view class="status-line">地点：{{destination}}</view>
+    <view class="status-line">{{locationText}}</view>
+    <view class="status-line" wx:if="{{mode === 'story'}}">当前身份：{{role}}</view>
+    <view class="status-line" wx:if="{{mode === 'citywalk'}}">当前宇宙：{{universe.name}}</view>
+    <view class="status-line">已获得金币：{{earnedCoins}}</view>
+    <view class="status-line" wx:if="{{mode === 'story'}}">{{chapterProgressText}}</view>
+    <view class="status-actions">
+      <button size="mini" bindtap="refreshLocation" style="background: {{theme.primary}};">刷新定位</button>
+      <button size="mini" bindtap="requestLocationPermission" wx:if="{{!locationReady || locationDenied}}" style="background: {{theme.primary}};">
+        授权定位
+      </button>
+      <button size="mini" bindtap="openLocationSettings" wx:if="{{!locationReady || locationDenied}}" style="background: {{theme.primary}};">
+        打开设置
+      </button>
+      <button size="mini" bindtap="toReward" style="background: {{theme.primary}};">前往结算</button>
+    </view>
+  </view>
+
+  <block wx:if="{{mode === 'story'}}">
+    <view class="story-panel glass-card" style="border-color: {{theme.accent}};" wx:if="{{storyStep !== 'done'}}">
+      <view class="chapter-title">{{script.chapters[chapterIndex].title}}</view>
+      <view class="checkpoint">任务点：{{script.chapters[chapterIndex].checkpoint.name}}</view>
+      <view class="checkpoint">{{chapterDistanceText}}</view>
+      <view class="chapter-context">文化背景：{{script.chapters[chapterIndex].context}}</view>
+      <view class="chapter-story">剧情正文：{{script.chapters[chapterIndex].story}}</view>
+      <view class="chapter-reveal" wx:if="{{storyStep === 'read'}}">阅读完本节后，请点击“进入本节谜题”。</view>
+
+      <view class="story-actions" wx:if="{{storyStep === 'read'}}">
+        <button size="mini" bindtap="startPuzzle" disabled="{{!isNearCheckpoint}}" style="background: {{theme.primary}};">
+          进入本节谜题
+        </button>
+      </view>
+
+      <view class="quiz-area" wx:if="{{storyStep === 'quiz'}}">
+        <view class="question">{{script.chapters[chapterIndex].question}}</view>
+        <view class="story-options">
+          <view
+            class="story-option {{storyAnswerIndex === idx ? 'active' : ''}}"
+            wx:for="{{script.chapters[chapterIndex].options}}"
+            wx:key="index"
+            wx:for-item="option"
+            wx:for-index="idx"
+            data-idx="{{idx}}"
+            bindtap="chooseStoryOption"
+          >
+            {{option}}
+          </view>
+        </view>
+        <view class="dialog-actions">
+          <button size="mini" bindtap="submitStoryAnswer" style="background: {{theme.primary}};">提交谜题</button>
+          <button size="mini" bindtap="backToStory">返回故事</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="story-done glass-card" style="border-color: {{theme.accent}};" wx:if="{{storyStep === 'done'}}">
+      <view class="done-title">{{script.title}} · 完结</view>
+      <view class="done-text">{{script.chapters[script.chapters.length - 1].reveal}}</view>
+      <button size="mini" bindtap="toReward" style="background: {{theme.primary}};">开启终章盲盒</button>
+    </view>
+  </block>
+
+  <block wx:if="{{mode === 'citywalk'}}">
+    <view class="city-intro glass-card">
+      <view class="city-title">{{universe.desc}}</view>
+      <view class="city-sub">每道任务都要完成实景上传 + 观察题，才能计入进度。</view>
+    </view>
+    <view class="city-task glass-card" wx:for="{{cityTasks}}" wx:key="id" wx:for-item="task">
+      <view class="task-title">{{task.title}}</view>
+      <view class="task-prompt">任务点：{{task.checkpoint.name}}</view>
+      <view class="task-prompt">{{cityTaskState[task.id].distanceText}}</view>
+      <view class="task-prompt">{{task.prompt}}</view>
+      <view class="task-progress">上传进度：{{cityTaskState[task.id].count}} / {{task.targetCount}}</view>
+      <button
+        size="mini"
+        class="upload-btn"
+        data-taskid="{{task.id}}"
+        bindtap="uploadCityPhoto"
+        disabled="{{!cityTaskState[task.id].near}}"
+      >
+        AR 实景拍照上传
+      </button>
+      <view class="question">{{task.question}}</view>
+      <view class="city-options">
+        <view
+          class="city-option {{cityTaskState[task.id].optionIndex === optionIndex ? 'active' : ''}}"
+          wx:for="{{task.options}}"
+          wx:key="index"
+          wx:for-item="opt"
+          wx:for-index="optionIndex"
+          data-taskid="{{task.id}}"
+          data-idx="{{optionIndex}}"
+          bindtap="chooseCityOption"
+        >
+          {{opt}}
+        </view>
+      </view>
+      <button
+        size="mini"
+        data-taskid="{{task.id}}"
+        bindtap="verifyCityTask"
+        disabled="{{cityTaskState[task.id].completed}}"
+      >
+        {{cityTaskState[task.id].completed ? "任务已完成" : "提交该任务"}}
+      </button>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/script-hub/index",
+    "pages/script-detail/index",
+    "pages/game/index",
+    "pages/reward/index",
+    "pages/creator/index",
+    "pages/dashboard/index",
+    "pages/profile/index",
+    "pages/shop/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "幻境游踪",
+    "navigationBarBackgroundColor": "#0f1025",
+    "backgroundColor": "#070813",
+    "backgroundTextStyle": "dark"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于判断你是否到达剧本任务点并触发游览剧情"
+    }
+  },
+  "requiredPrivateInfos": ["getLocation"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

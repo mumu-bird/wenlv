@@ -1,0 +1,29 @@
+<view class="dashboard-page">
+  <view class="section-title">游客流量热力图</view>
+  <view class="heat glass-card">
+    <view class="bar" style="height: 48%"></view>
+    <view class="bar" style="height: 76%"></view>
+    <view class="bar" style="height: 62%"></view>
+    <view class="bar" style="height: 88%"></view>
+    <view class="bar" style="height: 52%"></view>
+  </view>
+
+  <view class="section-title">商家核销数据</view>
+  <view class="table glass-card">
+    <view class="row header">
+      <text>商家</text>
+      <text>核销券</text>
+      <text>转化率</text>
+    </view>
+    <view class="row">
+      <text>邯郸印象茶铺</text>
+      <text>126</text>
+      <text>37%</text>
+    </view>
+    <view class="row">
+      <text>城南文创社</text>
+      <text>82</text>
+      <text>29%</text>
+    </view>
+  </view>
+</view>

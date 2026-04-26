@@ -1,0 +1,20 @@
+page {
+  min-height: 100%;
+  background: radial-gradient(circle at top, #1f275a 0%, #0a0d22 45%, #04050f 100%);
+  color: #f4f5ff;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 20rpx 50rpx rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16rpx);
+  border-radius: 28rpx;
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 24rpx;
+}

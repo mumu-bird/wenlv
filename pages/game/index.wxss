@@ -1,0 +1,187 @@
+.game-page {
+  padding: 24rpx;
+}
+
+.status {
+  padding: 22rpx;
+}
+
+.status-title {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.status-line {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  opacity: 0.85;
+}
+
+.status-actions {
+  margin-top: 16rpx;
+  display: flex;
+  gap: 12rpx;
+}
+
+.status-actions button {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+}
+
+.story-panel {
+  margin-top: 20rpx;
+  padding: 24rpx;
+}
+
+.chapter-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.chapter-context,
+.chapter-story,
+.chapter-reveal {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  line-height: 1.7;
+}
+
+.checkpoint {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #a5e8ff;
+}
+
+.story-actions {
+  margin-top: 16rpx;
+}
+
+.story-actions button,
+.story-done button {
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.quiz-area {
+  margin-top: 16rpx;
+  padding-top: 14rpx;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.story-done {
+  margin-top: 20rpx;
+  padding: 28rpx;
+}
+
+.done-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.done-text {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+}
+
+.city-intro {
+  margin-top: 20rpx;
+  padding: 22rpx;
+}
+
+.city-title {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.city-sub {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  opacity: 0.8;
+}
+
+.city-task {
+  margin-top: 16rpx;
+  padding: 22rpx;
+}
+
+.task-title {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.task-prompt,
+.task-progress,
+.question {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+}
+
+.upload-btn {
+  margin-top: 12rpx;
+  color: #fff;
+  border: none;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.city-options {
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.city-option {
+  padding: 10rpx 14rpx;
+  border-radius: 14rpx;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 22rpx;
+}
+
+.city-option.active {
+  background: rgba(89, 146, 255, 0.35);
+  border-color: rgba(164, 232, 255, 0.9);
+}
+
+.city-task button {
+  margin-top: 12rpx;
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.story-options {
+  margin-top: 14rpx;
+}
+
+.story-option {
+  margin-top: 10rpx;
+  padding: 12rpx 16rpx;
+  border-radius: 14rpx;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  font-size: 22rpx;
+}
+
+.story-option.active {
+  background: rgba(96, 154, 255, 0.38);
+  border-color: rgba(174, 236, 255, 0.9);
+}
+
+.dialog-actions {
+  margin-top: 16rpx;
+  display: flex;
+  gap: 12rpx;
+}
+
+.dialog-actions button {
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.ok {
+  margin-top: 16rpx;
+  color: #9ce7ff;
+  font-size: 22rpx;
+}

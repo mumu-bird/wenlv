@@ -1,0 +1,67 @@
+.shop-page {
+  padding: 28rpx;
+}
+
+.wallet {
+  padding: 20rpx;
+}
+
+.title {
+  font-size: 24rpx;
+  opacity: 0.8;
+}
+
+.value {
+  margin-top: 8rpx;
+  font-size: 56rpx;
+  font-weight: 700;
+}
+
+.goods-card {
+  margin-bottom: 16rpx;
+  padding: 20rpx;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.desc {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  opacity: 0.82;
+}
+
+.bottom {
+  margin-top: 14rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #9ce7ff;
+  font-size: 24rpx;
+}
+
+button {
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.bag-card {
+  padding: 18rpx;
+}
+
+.bag-item {
+  padding: 12rpx 0;
+  font-size: 22rpx;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bag-empty {
+  font-size: 22rpx;
+  opacity: 0.72;
+}

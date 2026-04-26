@@ -1,0 +1,32 @@
+<view class="portal-page">
+  <view class="hero glass-card">
+    <view class="hero-bg hero-bg-1"></view>
+    <view class="hero-bg hero-bg-2"></view>
+    <view class="hero-title">幻境游踪</view>
+    <view class="hero-subtitle">剧本杀 + 现实导航 + 商业引流</view>
+    <view class="hero-tip">今晚适合开启「京城夜巡录」</view>
+  </view>
+
+  <view class="section-title">热门剧本</view>
+  <scroll-view class="script-scroll" scroll-x>
+    <view class="script-row">
+      <view class="script-card glass-card" wx:for="{{scripts}}" wx:key="id" data-city="{{item.city}}" bindtap="openScript">
+        <image class="script-image" src="{{item.cover}}" mode="aspectFill" />
+        <view class="script-content">
+          <view class="script-tag">{{item.tag}}</view>
+          <view class="script-title">{{item.title}}</view>
+          <view class="script-subtitle">{{item.subtitle}}</view>
+          <view class="script-meta">¥{{item.price}} · {{item.city}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="section-title">功能入口</view>
+  <view class="shortcut-grid">
+    <view class="shortcut-item glass-card" wx:for="{{shortcuts}}" wx:key="key" data-path="{{item.path}}" bindtap="onTapShortcut">
+      <view class="shortcut-title">{{item.title}}</view>
+      <view class="shortcut-desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

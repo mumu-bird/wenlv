@@ -1,0 +1,14 @@
+<view class="creator-page">
+  <view class="section-title">剧本编辑器原型</view>
+  <view class="editor glass-card">
+    <view class="label">地图点位拖拽预览</view>
+    <view class="map-mock">
+      <view class="dot dot-1"></view>
+      <view class="dot dot-2"></view>
+      <view class="dot dot-3"></view>
+    </view>
+    <view class="label">剧情输入</view>
+    <textarea class="story-input" placeholder="在此编写剧情文本、线索和答案..."></textarea>
+  </view>
+  <button bindtap="toDashboard">查看 B 端数据大屏</button>
+</view>

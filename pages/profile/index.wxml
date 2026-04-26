@@ -1,0 +1,17 @@
+<view class="profile-page">
+  <view class="wallet glass-card">
+    <view class="wallet-title">金币余额</view>
+    <view class="wallet-value">{{coins}}</view>
+    <view class="wallet-tip">可在周边商城兑换实体文创</view>
+    <view class="wallet-tip">已兑换商品：{{itemsCount}} 件</view>
+    <button bindtap="toShop">进入金币商城</button>
+  </view>
+
+  <view class="section-title">勋章墙</view>
+  <view class="medal-grid">
+    <view class="medal glass-card" wx:for="{{medals}}" wx:key="item">
+      <view class="medal-icon">🏅</view>
+      <view class="medal-name">{{item}}</view>
+    </view>
+  </view>
+</view>

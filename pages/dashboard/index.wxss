@@ -1,0 +1,34 @@
+.dashboard-page {
+  padding: 28rpx;
+}
+
+.heat {
+  height: 280rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 16%;
+  border-radius: 12rpx 12rpx 0 0;
+  background: linear-gradient(180deg, #9ae6ff, #5364ff);
+}
+
+.table {
+  padding: 20rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 22rpx;
+}
+
+.row.header {
+  font-size: 24rpx;
+  font-weight: 600;
+}

@@ -1,0 +1,51 @@
+.profile-page {
+  padding: 28rpx;
+}
+
+.wallet {
+  padding: 24rpx;
+}
+
+.wallet-title {
+  font-size: 24rpx;
+  opacity: 0.78;
+}
+
+.wallet-value {
+  margin-top: 8rpx;
+  font-size: 60rpx;
+  font-weight: 700;
+}
+
+.wallet-tip {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  opacity: 0.8;
+}
+
+button {
+  margin-top: 16rpx;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #4f80ff, #925cff);
+}
+
+.medal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16rpx;
+}
+
+.medal {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.medal-icon {
+  font-size: 42rpx;
+}
+
+.medal-name {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+}

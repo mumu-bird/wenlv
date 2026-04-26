@@ -1,0 +1,23 @@
+<view class="hub-page">
+  <view class="section-title">先输入你想去的地点</view>
+  <view class="search-box glass-card">
+    <input
+      class="destination-input"
+      value="{{destinationInput}}"
+      placeholder="例如：北京 / 朝阳区 / 鼓楼"
+      bindinput="onInputDestination"
+    />
+    <button size="mini" bindtap="searchScripts">搜索剧本</button>
+  </view>
+
+  <view class="section-title">可选剧本</view>
+  <view class="script-card glass-card" wx:for="{{filteredScripts}}" wx:key="id" data-id="{{item.id}}" bindtap="chooseScript">
+    <image class="cover" src="{{item.cover}}" mode="aspectFill" />
+    <view class="info">
+      <view class="name">{{item.title}}</view>
+      <view class="meta">{{item.city}}·{{item.district}} · {{item.tag}}</view>
+      <view class="sub">{{item.subtitle}}</view>
+      <view class="price">¥{{item.price}}</view>
+    </view>
+  </view>
+</view>

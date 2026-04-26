@@ -1,0 +1,21 @@
+<view class="reward-page">
+  <view class="section-title">终点盲盒</view>
+  <view class="box-stage">
+    <view class="box {{opened ? 'opened' : ''}}" bindtap="openBox">
+      <view class="box-lid"></view>
+      <view class="box-body"></view>
+      <view class="box-light"></view>
+      <view class="reward-pop {{rewardVisible ? 'show' : ''}}">
+        <view class="reward-icon">🏅</view>
+        <view class="reward-name">{{medal}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="result glass-card {{rewardVisible ? 'visible' : ''}}" wx:if="{{opened}}">
+    <view class="result-title">恭喜获得</view>
+    <view class="medal">{{medal}}</view>
+    <view class="coins">金币 +{{coins}}</view>
+    <button bindtap="toProfile">查看勋章墙</button>
+  </view>
+</view>

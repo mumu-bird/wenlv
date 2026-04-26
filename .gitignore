@@ -1,0 +1,8 @@
+# WeChat Mini Program
+node_modules/
+project.private.config.json
+.DS_Store
+Thumbs.db
+dist/
+package-lock.json
+yarn.lock

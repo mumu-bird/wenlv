@@ -1,0 +1,22 @@
+<view class="shop-page">
+  <view class="wallet glass-card">
+    <view class="title">当前金币</view>
+    <view class="value">{{coins}}</view>
+  </view>
+
+  <view class="section-title">可兑换商品</view>
+  <view class="goods-card glass-card" wx:for="{{goods}}" wx:key="id">
+    <view class="name">{{item.name}}</view>
+    <view class="desc">{{item.desc}}</view>
+    <view class="bottom">
+      <view class="price">{{item.price}} 金币</view>
+      <button size="mini" data-id="{{item.id}}" bindtap="buyItem">立即兑换</button>
+    </view>
+  </view>
+
+  <view class="section-title">我的已购</view>
+  <view class="bag-card glass-card" wx:if="{{bag.length}}">
+    <view class="bag-item" wx:for="{{bag}}" wx:key="boughtAt">{{item.name}} · {{item.price}}金币</view>
+  </view>
+  <view class="bag-empty" wx:else>暂无已购商品</view>
+</view>
